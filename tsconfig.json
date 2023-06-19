@@ -7,5 +7,7 @@
   "compilerOptions": {
     // output to dist/ dir
     "outDir": "dist/",
+    "jsx": "react-jsx",
+    "importsNotUsedAsValues": "preserve"
   }
 }
