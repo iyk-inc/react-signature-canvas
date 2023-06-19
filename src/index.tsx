@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
+import { Options as SignaturePadOptions } from 'signature_pad'
 import SignaturePad from 'signature_pad'
 import trimCanvas from 'trim-canvas'
 
-export interface SignatureCanvasProps extends SignaturePad.SignaturePadOptions {
+export interface SignatureCanvasProps extends SignaturePadOptions {
   canvasProps?: React.CanvasHTMLAttributes<HTMLCanvasElement>
   clearOnResize?: boolean
 }
@@ -46,7 +47,7 @@ export class SignatureCanvas extends Component<SignatureCanvasProps> {
     }
   }
 
-  _excludeOurProps = (): SignaturePad.SignaturePadOptions => {
+  _excludeOurProps = (): SignaturePadOptions => {
     const { canvasProps, clearOnResize, ...sigPadProps } = this.props
     return sigPadProps
   }
